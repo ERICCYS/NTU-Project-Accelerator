@@ -8,7 +8,7 @@ from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboa
 from telepot import DelegatorBot
 from telepot.delegate import pave_event_space, per_chat_id, create_open
 import csv
-project =['Electronic devices','Computer software','Robots']		
+project = ['Electronic devices','Computer software','Robots']		
 
 class ProjectBot(telepot.helper.ChatHandler):
     

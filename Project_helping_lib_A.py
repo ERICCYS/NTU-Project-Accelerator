@@ -301,11 +301,3 @@ def delete_info_from_R_second(rows):
     with open ('Robots.csv','w', newline = '',encoding = 'utf-8-sig') as output_file:
         file_write = csv.writer(output_file) 
         file_write.writerows(rows)
-
-    
-
-    
-    
-
-        
-        
