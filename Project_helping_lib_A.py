@@ -85,7 +85,7 @@ def confirm_info():
     ])
     return tmp
 def Count_E_students():
-    with open('Electronic.csv',newline = '') as file:
+    with open('Electronic.csv',newline = '',encoding = 'utf-8-sig') as file:
         file_read = csv.reader(file, delimiter = ',')
         count = 0
         for row in file_read:
@@ -97,7 +97,7 @@ def Count_E_students():
             else: pass
     return count
 def Count_C_students():
-    with open('Computer Software.csv',newline = '') as file:
+    with open('Computer Software.csv',newline = '',encoding = 'utf-8-sig') as file:
         file_read = csv.reader(file, delimiter = ',')
         count = 0
         for row in file_read:
@@ -109,7 +109,7 @@ def Count_C_students():
             else: pass
     return count
 def Count_R_students():
-    with open('Robots.csv',newline = '') as file:
+    with open('Robots.csv',newline = '',encoding = 'utf-8-sig') as file:
         file_read = csv.reader(file, delimiter = ',')
         count = 0
         for row in file_read:
@@ -121,7 +121,7 @@ def Count_R_students():
             else: pass
     return count
 def Browse_datails_E(ID,num):
-    with open('Electronic.csv',newline = '') as file:
+    with open('Electronic.csv',newline = '',encoding = 'utf-8-sig') as file:
         file_read = csv.reader(file,delimiter = ',')
         if num == 0:
             bot.sendMessage(ID,'We haven\'t got any info yet. you can be the first one!')
@@ -151,7 +151,7 @@ def Browse_datails_E(ID,num):
         bot.sendMessage(ID,'That\'s all, do you want to join them?\nGet their info and contact them.',reply_markup = answer)
         
 def Browse_datails_C(ID,num):
-    with open('Computer Software.csv',newline = '') as file:
+    with open('Computer Software.csv',newline = '',encoding = 'utf-8-sig') as file:
         file_read = csv.reader(file,delimiter = ',')
         if num == 0:
             bot.sendMessage(ID,'We haven\'t got any info yet. You can be the first one!')
@@ -180,7 +180,7 @@ def Browse_datails_C(ID,num):
         bot.sendMessage(ID,'That\'s all, do you want to join them?\nGet their info and contact them.',reply_markup = answer)
         
 def Browse_datails_R(ID,num):
-    with open('Robots.csv',newline = '') as file:
+    with open('Robots.csv',newline = '',encoding = 'utf-8-sig') as file:
         file_read = csv.reader(file,delimiter = ',')
         if num == 0:
             bot.sendMessage(ID,'We haven\'t got any info yet. You can be the first one!')
@@ -216,12 +216,12 @@ def ask_if_news():
     ])
     return tmp
 def add_to_database_E(info):
-    with open("Electronic.csv",'a',newline = '') as target_file:
+    with open("Electronic.csv",'a',newline = '',encoding = 'utf-8-sig') as target_file:
         file_app = csv.writer(target_file)
         file_app.writerow(info)
 
 def add_to_database_C(info):
-    with open("Computer Software.csv",'a',newline = '') as target_file:
+    with open("Computer Software.csv",'a',newline = '',encoding = 'utf-8-sig') as target_file:
         file_app = csv.writer(target_file)
         file_app.writerow(info)
 
@@ -231,7 +231,7 @@ def add_to_database_R(info):
         file_app.writerow(info)
         
 def delete_info_from_E_first(deletename):
-    with open('Electronic.csv', 'r', newline = '') as get_file:
+    with open('Electronic.csv', 'r', newline = '',encoding = 'utf-8-sig') as get_file:
         check = []
         rows = []
         file_read = csv.reader(get_file,delimiter = ',')
@@ -250,12 +250,12 @@ def delete_info_from_E_first(deletename):
         return rows
 
 def delete_info_from_E_second(rows):
-    with open ('Electronic.csv','w', newline = '') as output_file:
+    with open ('Electronic.csv','w', newline = '',encoding = 'utf-8-sig') as output_file:
         file_write = csv.writer(output_file) 
         file_write.writerows(rows)
         
 def delete_info_from_C_first(deletename):
-    with open('Computer Software.csv', 'r', newline = '') as get_file:
+    with open('Computer Software.csv', 'r', newline = '',encoding = 'utf-8-sig') as get_file:
         check = []
         rows = []
         file_read = csv.reader(get_file,delimiter = ',')
@@ -274,12 +274,12 @@ def delete_info_from_C_first(deletename):
         return rows
 
 def delete_info_from_C_second(rows):
-    with open ('Computer Software.csv','w', newline = '') as output_file:
+    with open ('Computer Software.csv','w', newline = '',encoding = 'utf-8-sig') as output_file:
         file_write = csv.writer(output_file) 
         file_write.writerows(rows)
 
 def delete_info_from_R_first(deletename):
-    with open('Robots.csv', 'r', newline = '') as get_file:
+    with open('Robots.csv', 'r', newline = '',encoding = 'utf-8-sig') as get_file:
         check = []
         rows = []
         file_read = csv.reader(get_file,delimiter = ',')
@@ -298,7 +298,7 @@ def delete_info_from_R_first(deletename):
         return rows
 
 def delete_info_from_R_second(rows):
-    with open ('Robots.csv','w', newline = '') as output_file:
+    with open ('Robots.csv','w', newline = '',encoding = 'utf-8-sig') as output_file:
         file_write = csv.writer(output_file) 
         file_write.writerows(rows)
 

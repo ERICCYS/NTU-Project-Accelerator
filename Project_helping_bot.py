@@ -1,14 +1,8 @@
 import telepot
 import time
-from Project_helping_lib_A import welcome_keyboard, project_keyboard,project_add,\
-     confirm_add_info_E,confirm_add_info_C,confirm_add_info_R,\
-     add_to_database_E,add_to_database_C,add_to_database_R,\
-     confirm_info,Count_E_students,Count_C_students,Count_R_students,\
-     Browse_datails_E,Browse_datails_C,Browse_datails_R,\
-     delete_info_from_E_first,delete_info_from_E_second ,delete_info_from_C_first,delete_info_from_C_second,delete_info_from_R_first,delete_info_from_R_second,\
-     news_keyboard, ask_if_news
-from Project_helping_lib_C import menu, newstypeFT, newstypeURL, form, projectype, nextfiveras, nextfiveard
-from Project_helping_lib_B import electronics, software, hardware, ProjectExample
+from Project_helping_lib_A import *
+from Project_helping_lib_B import *
+from Project_helping_lib_C import *
 from telepot.loop import MessageLoop
 from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 from telepot import DelegatorBot
@@ -249,7 +243,7 @@ class ProjectBot(telepot.helper.ChatHandler):
                     bot.sendMessage(chat_id,'Do you want to store your info into my database?',reply_markup = project_add())
                 elif self.lastmsg == 'Robots':
                     #--The user wants to add info to database, add info status becomes 'True'--
-                    if msg['text'] == 'Yes, I would like to add my info.':
+                    if msg['text'] == 'Yes,I would like to add my info.':
                         self.Add_info_R = True
                         bot.sendMessage(chat_id,'Confirm to add your info?',reply_markup = confirm_add_info_R())
                     elif msg['text'] == 'Not now, I would like to see the database first, thanks.':
