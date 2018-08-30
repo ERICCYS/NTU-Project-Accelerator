@@ -1,7 +1,7 @@
 # NTU Project Accelerator
 NTU Project Accelerator is a platform for student in NTU to find teammate and kick off their projects
 
-# Latest Release
+## Latest Release
 NTU Project Accelerator v1.0.0
 
 ## Required Dependencies
